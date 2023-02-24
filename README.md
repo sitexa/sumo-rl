@@ -86,7 +86,7 @@ E.g.: In the [2-way single intersection](https://github.com/LucasAlegre/sumo-rl/
 <img src="outputs/actions.png" align="center" width="75%"/>
 </p>
 
-<img src="outputs/actions.png" style="width:300px;height:100px;">
+<img src="/outputs/actions.png" style="width:300px;height:100px;">
     
 Important: every time a phase change occurs, the next phase is preeceded by a yellow phase lasting ```yellow_time``` seconds.
 
