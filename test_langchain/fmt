@@ -1,0 +1,24 @@
+SUMO Environment for Traffic Signal Control
+
+- param *net_file*: (str) SUMO .net.xml file
+- param route_file: (str) SUMO .rou.xml file
+- param out_csv_name: (Optional[str]) name of the .csv output with simulation results. If None no output is generated
+- param use_gui: (bool) Wheter to run SUMO simulation with GUI visualisation
+- param virtual_display: (Optional[Tuple[int,int]]) Resolution of a virtual display for rendering
+- param begin_time: (int) The time step (in seconds) the simulation starts
+- param num_seconds: (int) Number of simulated seconds on SUMO. The time in seconds the simulation must end.
+- param max_depart_delay: (int) Vehicles are discarded if they could not be inserted after max_depart_delay seconds
+- param waiting_time_memory: (int) Number of seconds to remember the waiting time of a vehicle (see https://sumo.dlr.de/pydoc/traci._vehicle.html#VehicleDomain-getAccumulatedWaitingTime)
+- param delta_time: (int) Simulation seconds between actions
+- param min_green: (int) Minimum green time in a phase
+- param max_green: (int) Max green time in a phase
+- single_agent: (bool) If true, it behaves like a regular gym.Env. Else, it behaves like a MultiagentEnv (https://github.com/ray-project/ray/blob/master/python/ray/rllib/env/multi_agent_env.py)
+- reward_fn: (str/function/dict) String with the name of the reward function used by the agents, a reward function, or dictionary with reward functions assigned to individual traffic lights by their keys
+- observation_fn: (str/function) String with the name of the observation function or a callable observation function itself
+- add_system_info: (bool) If true, it computes system metrics (total queue, total waiting time, average speed) in the info dictionary
+- add_per_agent_info: (bool) If true, it computes per-agent (per-traffic signal) metrics (average accumulated waiting time, average queue) in the info dictionary
+- sumo_seed: (int/string) Random seed for sumo. If 'random' it uses a randomly chosen seed.
+- fixed_ts: (bool) If true, it will follow the phase configuration in the route_file and ignore the actions.
+- sumo_warnings: (bool) If False, remove SUMO warnings in the terminal
+- additional_sumo_cmd: (list) Additional command line arguments for SUMO
+- render_mode: (str) Mode of rendering. Can be 'human' or 'rgb_array'
