@@ -32,10 +32,13 @@ class PythonREPL:
 
 llm = OpenAI(temperature=0.0)
 python_repl = Tool(
-    "Python REPL",
-    PythonREPL().run,
-    "A Python shell. Use this to execute python commands. Input should be a valid python command. If you expect output it should be printed out.",
+    name="Python REPL",
+    func=PythonREPL().run,
+    description="A Python shell. Use this to execute python commands. Input should be a valid python command. If you expect output it should be printed out.",
 )
 tools = [python_repl]
+
 agent = initialize_agent(tools, llm, agent="zero-shot-react-description", verbose=True)
 agent.run("What is the 10th fibonacci number?")
+
+# 运行错误

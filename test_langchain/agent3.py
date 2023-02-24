@@ -22,3 +22,5 @@ tools = [
 mrkl = initialize_agent(tools, llm, agent="zero-shot-react-description", verbose=True)
 
 mrkl.run("What is 3 times 4")
+
+# 运行错误
