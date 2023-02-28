@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Traffic Signal" href="../traffic_signal/" /><link rel="prev" title="Sumo Environment" href="../sumo_env/" />
 
     <!-- Generated with Sphinx 5.3.0 and Furo 2022.12.07 -->
-        <title>Petting Zoo Sumo Environment - SUMO-RL 1.4.1 documentation</title>
+        <title>Petting Zoo Sumo Environment - SUMO-RL 1.4.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../"><div class="brand">SUMO-RL 1.4.1 documentation</div></a>
+      <a href="../../"><div class="brand">SUMO-RL 1.4.2 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../">
   
   
-  <span class="sidebar-brand-text">SUMO-RL 1.4.1 documentation</span>
+  <span class="sidebar-brand-text">SUMO-RL 1.4.2 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search/" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -163,6 +163,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../sumo_env/">Sumo Environment</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Petting Zoo Sumo Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../traffic_signal/">Traffic Signal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observations/">Observation Functions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api/gymnasium/">Gymnasium API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/pettingzoo/">PettingZoo API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Observation, Action and Reward</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../mdp/observation/">Observation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mdp/action/">Action</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mdp/reward/">Reward</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Citing</span></p>
 <ul>
@@ -219,71 +231,61 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="sumo_rl.environment.env.SumoEnvironmentPZ">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sumo_rl.environment.env.</span></span><span class="sig-name descname"><span class="pre">SumoEnvironmentPZ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sumo_rl.environment.env.SumoEnvironmentPZ" title="Permalink to this definition">#</a></dt>
-<dd><dl class="py method">
+<dd><p>A wrapper for the SUMO environment that implements the AECEnv interface from PettingZoo.</p>
+<p>For more information, see <a class="reference external" href="https://pettingzoo.farama.org/api/aec/">https://pettingzoo.farama.org/api/aec/</a>.</p>
+<p>The arguments are the same as for <a class="reference internal" href="../sumo_env/#sumo_rl.environment.env.SumoEnvironment" title="sumo_rl.environment.env.SumoEnvironment"><code class="xref py py-class docutils literal notranslate"><span class="pre">sumo_rl.environment.env.SumoEnvironment</span></code></a>.</p>
+<dl class="py method">
 <dt class="sig sig-object py" id="sumo_rl.environment.env.SumoEnvironmentPZ.action_space">
 <span class="sig-name descname"><span class="pre">action_space</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sumo_rl.environment.env.SumoEnvironmentPZ.action_space" title="Permalink to this definition">#</a></dt>
-<dd><p>Takes in agent and returns the action space for that agent.</p>
-<p>MUST return the same value for the same agent name</p>
-<p>Default implementation is to return the action_spaces dict</p>
+<dd><p>Return the action space for the agent.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="sumo_rl.environment.env.SumoEnvironmentPZ.close">
 <span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sumo_rl.environment.env.SumoEnvironmentPZ.close" title="Permalink to this definition">#</a></dt>
-<dd><p>Closes any resources that should be released.</p>
-<p>Closes the rendering window, subprocesses, network connections,
-or any other resources that should be released.</p>
+<dd><p>Close the environment and stop the SUMO simulation.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="sumo_rl.environment.env.SumoEnvironmentPZ.observation_space">
 <span class="sig-name descname"><span class="pre">observation_space</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sumo_rl.environment.env.SumoEnvironmentPZ.observation_space" title="Permalink to this definition">#</a></dt>
-<dd><p>Takes in agent and returns the observation space for that agent.</p>
-<p>MUST return the same value for the same agent name</p>
-<p>Default implementation is to return the observation_spaces dict</p>
+<dd><p>Return the observation space for the agent.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="sumo_rl.environment.env.SumoEnvironmentPZ.observe">
 <span class="sig-name descname"><span class="pre">observe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sumo_rl.environment.env.SumoEnvironmentPZ.observe" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns the observation an agent currently can make.</p>
-<p><cite>last()</cite> calls this function.</p>
+<dd><p>Return the observation for the agent.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="sumo_rl.environment.env.SumoEnvironmentPZ.render">
 <span class="sig-name descname"><span class="pre">render</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'human'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sumo_rl.environment.env.SumoEnvironmentPZ.render" title="Permalink to this definition">#</a></dt>
-<dd><p>Renders the environment as specified by self.render_mode.</p>
-<p>Render mode can be <cite>human</cite> to display a window.
-Other render modes in the default environments are <cite>‘rgb_array’</cite>
-which returns a numpy array and is supported by all environments outside of classic,
-and <cite>‘ansi’</cite> which returns the strings printed (specific to classic environments).</p>
+<dd><p>Render the environment.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="sumo_rl.environment.env.SumoEnvironmentPZ.reset">
 <span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sumo_rl.environment.env.SumoEnvironmentPZ.reset" title="Permalink to this definition">#</a></dt>
-<dd><p>Resets the environment to a starting state.</p>
+<dd><p>Reset the environment.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sumo_rl.environment.env.SumoEnvironmentPZ.save_csv">
+<span class="sig-name descname"><span class="pre">save_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">out_csv_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">episode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sumo_rl.environment.env.SumoEnvironmentPZ.save_csv" title="Permalink to this definition">#</a></dt>
+<dd><p>Save metrics of the simulation to a .csv file.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="sumo_rl.environment.env.SumoEnvironmentPZ.seed">
 <span class="sig-name descname"><span class="pre">seed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sumo_rl.environment.env.SumoEnvironmentPZ.seed" title="Permalink to this definition">#</a></dt>
-<dd><p>Reseeds the environment (making the resulting environment deterministic).</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="sumo_rl.environment.env.SumoEnvironmentPZ.state">
-<span class="sig-name descname"><span class="pre">state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sumo_rl.environment.env.SumoEnvironmentPZ.state" title="Permalink to this definition">#</a></dt>
-<dd><p>State returns a global view of the environment.</p>
-<p>It is appropriate for centralized training decentralized execution methods like QMIX</p>
+<dd><p>Set the seed for the environment.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="sumo_rl.environment.env.SumoEnvironmentPZ.step">
 <span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sumo_rl.environment.env.SumoEnvironmentPZ.step" title="Permalink to this definition">#</a></dt>
-<dd><p>Accepts and executes the action of the current agent_selection in the environment.</p>
-<p>Automatically switches control to the next agent.</p>
+<dd><p>Step the environment.</p>
 </dd></dl>
 
 </dd></dl>
@@ -353,8 +355,8 @@ and <cite>‘ansi’</cite> which returns the strings printed (specific to class
 <li><a class="reference internal" href="#sumo_rl.environment.env.SumoEnvironmentPZ.observe"><code class="docutils literal notranslate"><span class="pre">SumoEnvironmentPZ.observe()</span></code></a></li>
 <li><a class="reference internal" href="#sumo_rl.environment.env.SumoEnvironmentPZ.render"><code class="docutils literal notranslate"><span class="pre">SumoEnvironmentPZ.render()</span></code></a></li>
 <li><a class="reference internal" href="#sumo_rl.environment.env.SumoEnvironmentPZ.reset"><code class="docutils literal notranslate"><span class="pre">SumoEnvironmentPZ.reset()</span></code></a></li>
+<li><a class="reference internal" href="#sumo_rl.environment.env.SumoEnvironmentPZ.save_csv"><code class="docutils literal notranslate"><span class="pre">SumoEnvironmentPZ.save_csv()</span></code></a></li>
 <li><a class="reference internal" href="#sumo_rl.environment.env.SumoEnvironmentPZ.seed"><code class="docutils literal notranslate"><span class="pre">SumoEnvironmentPZ.seed()</span></code></a></li>
-<li><a class="reference internal" href="#sumo_rl.environment.env.SumoEnvironmentPZ.state"><code class="docutils literal notranslate"><span class="pre">SumoEnvironmentPZ.state()</span></code></a></li>
 <li><a class="reference internal" href="#sumo_rl.environment.env.SumoEnvironmentPZ.step"><code class="docutils literal notranslate"><span class="pre">SumoEnvironmentPZ.step()</span></code></a></li>
 </ul>
 </li>

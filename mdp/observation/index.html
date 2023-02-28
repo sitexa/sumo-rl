@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Sumo Environment" href="../../documentation/sumo_env/" /><link rel="prev" title="SUMO-RL" href="../../" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Action" href="../action/" /><link rel="prev" title="PettingZoo API" href="../../api/pettingzoo/" />
 
     <!-- Generated with Sphinx 5.3.0 and Furo 2022.12.07 -->
-        <title>Install - SUMO-RL 1.4.2 documentation</title>
+        <title>Observation - SUMO-RL 1.4.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -134,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -155,8 +155,8 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Install</span></p>
-<ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Install</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../install/install/">Install</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul>
@@ -171,10 +171,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../../api/pettingzoo/">PettingZoo API</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Observation, Action and Reward</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../mdp/observation/">Observation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../mdp/action/">Action</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../mdp/reward/">Reward</a></li>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Observation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../action/">Action</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reward/">Reward</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Citing</span></p>
 <ul>
@@ -204,7 +204,7 @@
         </a>
         <div class="content-icon-container">
           <div class="edit-this-page">
-  <a class="muted-link" href="https://github.com/LucasAlegre/sumo-rl/edit/master/docs/install/install.md" title="Edit this page">
+  <a class="muted-link" href="https://github.com/LucasAlegre/sumo-rl/edit/master/docs/mdp/observation.md" title="Edit this page">
     <svg aria-hidden="true" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
       <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
@@ -220,45 +220,25 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          <section id="install">
-<h1>Install<a class="headerlink" href="#install" title="Permalink to this heading">#</a></h1>
-<section id="install-sumo-latest-version">
-<h2>Install SUMO latest version:<a class="headerlink" href="#install-sumo-latest-version" title="Permalink to this heading">#</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:sumo/stable
-sudo<span class="w"> </span>apt-get<span class="w"> </span>update
-sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>sumo<span class="w"> </span>sumo-tools<span class="w"> </span>sumo-doc
+          <section id="observation">
+<h1>Observation<a class="headerlink" href="#observation" title="Permalink to this heading">#</a></h1>
+<p>The default observation for each traffic signal agent is a vector:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">obs</span> <span class="o">=</span> <span class="p">[</span><span class="n">phase_one_hot</span><span class="p">,</span> <span class="n">min_green</span><span class="p">,</span> <span class="n">lane_1_density</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="n">lane_n_density</span><span class="p">,</span> <span class="n">lane_1_queue</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="n">lane_n_queue</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>Don’t forget to set SUMO_HOME variable (default sumo installation path is /usr/share/sumo)</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export SUMO_HOME=&quot;/usr/share/sumo&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
-<span class="nb">source</span><span class="w"> </span>~/.bashrc
-</pre></div>
-</div>
-<p>Important: for a huge performance boost (~8x) with Libsumo, you can declare the variable:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">LIBSUMO_AS_TRACI</span><span class="o">=</span><span class="m">1</span>
-</pre></div>
-</div>
-<p>Notice that you will not be able to run with sumo-gui or with multiple simulations in parallel if this is active (<a class="reference external" href="https://sumo.dlr.de/docs/Libsumo.html">more details</a>).</p>
-</section>
-<section id="install-sumo-rl">
-<h2>Install SUMO-RL<a class="headerlink" href="#install-sumo-rl" title="Permalink to this heading">#</a></h2>
-<p>Stable release version is available through pip</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>sumo-rl
-</pre></div>
-</div>
-<p>Alternatively, you can install using the latest (unreleased) version</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/LucasAlegre/sumo-rl
-<span class="nb">cd</span><span class="w"> </span>sumo-rl
-pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
-</pre></div>
-</div>
-</section>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">phase_one_hot</span></code> is a one-hot encoded vector indicating the current active green phase</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_green</span></code> is a binary variable indicating whether min_green seconds have already passed in the current phase</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lane_i_density</span></code> is the number of vehicles in incoming lane i dividided by the total capacity of the lane</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lane_i_queue</span></code>is the number of queued (speed below 0.1 m/s) vehicles in incoming lane i divided by the total capacity of the lane</p></li>
+</ul>
+<p>You can define your own observation by implementing a class that inherits from <a class="reference external" href="https://github.com/LucasAlegre/sumo-rl/blob/master/sumo_rl/environment/observations.py">ObservationFunction</a> and passing it to the environment constructor.</p>
 </section>
 
         </article>
@@ -266,23 +246,23 @@ pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </s
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../../documentation/sumo_env/">
+          <a class="next-page" href="../action/">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Sumo Environment</div>
+                <div class="title">Action</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../../">
+          <a class="prev-page" href="../../api/pettingzoo/">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Home</div>
+                <div class="title">PettingZoo API</div>
                 
               </div>
             </a>
@@ -304,28 +284,8 @@ pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </s
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">Install</a><ul>
-<li><a class="reference internal" href="#install-sumo-latest-version">Install SUMO latest version:</a></li>
-<li><a class="reference internal" href="#install-sumo-rl">Install SUMO-RL</a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>

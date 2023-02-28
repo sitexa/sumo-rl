@@ -6,6 +6,10 @@ lastpage:
 
 # SUMO-RL
 
+```{figure} _static/logo.png
+   :alt: SUMO-RL
+```
+
 ```{include} ../README.md
 :start-after: <!-- start intro -->
 :end-before: <!-- end intro -->
@@ -25,6 +29,24 @@ install/install
 documentation/sumo_env
 documentation/pz_env
 documentation/traffic_signal
+documentation/observations
+```
+
+```{toctree}
+:hidden:
+:caption: API
+
+api/gymnasium
+api/pettingzoo
+```
+
+```{toctree}
+:hidden:
+:caption: Observation, Action and Reward
+
+mdp/observation
+mdp/action
+mdp/reward
 ```
 
 ```{toctree}

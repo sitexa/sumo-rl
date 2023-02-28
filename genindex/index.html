@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="#" /><link rel="search" title="Search" href="../search/" />
 
-    <!-- Generated with Sphinx 5.3.0 and Furo 2022.12.07 --><title>Index - SUMO-RL 1.4.1 documentation</title>
+    <!-- Generated with Sphinx 5.3.0 and Furo 2022.12.07 --><title>Index - SUMO-RL 1.4.2 documentation</title>
 <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -121,7 +121,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../"><div class="brand">SUMO-RL 1.4.1 documentation</div></a>
+      <a href="../"><div class="brand">SUMO-RL 1.4.2 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -144,7 +144,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../">
   
   
-  <span class="sidebar-brand-text">SUMO-RL 1.4.1 documentation</span>
+  <span class="sidebar-brand-text">SUMO-RL 1.4.2 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search/" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -161,6 +161,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../documentation/sumo_env/">Sumo Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../documentation/pz_env/">Petting Zoo Sumo Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../documentation/traffic_signal/">Traffic Signal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/observations/">Observation Functions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/gymnasium/">Gymnasium API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/pettingzoo/">PettingZoo API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Observation, Action and Reward</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../mdp/observation/">Observation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mdp/action/">Action</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mdp/reward/">Reward</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Citing</span></p>
 <ul>
@@ -206,13 +218,19 @@
           
 <section class="genindex-section">
   <h1 id="index">Index</h1>
-  <div class="genindex-jumpbox"><a href="#A"><strong>A</strong></a> | <a href="#C"><strong>C</strong></a> | <a href="#O"><strong>O</strong></a> | <a href="#R"><strong>R</strong></a> | <a href="#S"><strong>S</strong></a> | <a href="#T"><strong>T</strong></a></div>
+  <div class="genindex-jumpbox"><a href="#A"><strong>A</strong></a> | <a href="#C"><strong>C</strong></a> | <a href="#D"><strong>D</strong></a> | <a href="#E"><strong>E</strong></a> | <a href="#G"><strong>G</strong></a> | <a href="#O"><strong>O</strong></a> | <a href="#R"><strong>R</strong></a> | <a href="#S"><strong>S</strong></a> | <a href="#T"><strong>T</strong></a> | <a href="#U"><strong>U</strong></a></div>
 </section>
 <section id="A" class="genindex-section">
   <h2>A</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="../documentation/sumo_env/#sumo_rl.environment.env.SumoEnvironment.action_space">action_space (sumo_rl.environment.env.SumoEnvironment property)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="../documentation/pz_env/#sumo_rl.environment.env.SumoEnvironmentPZ.action_space">action_space() (sumo_rl.environment.env.SumoEnvironmentPZ method)</a>
+</li>
+        <li><a href="../documentation/sumo_env/#sumo_rl.environment.env.SumoEnvironment.action_spaces">action_spaces() (sumo_rl.environment.env.SumoEnvironment method)</a>
 </li>
     </ul></td>
   </tr></table>
@@ -229,6 +247,56 @@
 </li>
         </ul></li>
     </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="../documentation/traffic_signal/#sumo_rl.environment.traffic_signal.TrafficSignal.compute_observation">compute_observation() (sumo_rl.environment.traffic_signal.TrafficSignal method)</a>
+</li>
+        <li><a href="../documentation/traffic_signal/#sumo_rl.environment.traffic_signal.TrafficSignal.compute_reward">compute_reward() (sumo_rl.environment.traffic_signal.TrafficSignal method)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="D" class="genindex-section">
+  <h2>D</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="../documentation/observations/#sumo_rl.environment.observations.DefaultObservationFunction">DefaultObservationFunction (class in sumo_rl.environment.observations)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="E" class="genindex-section">
+  <h2>E</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="../documentation/sumo_env/#sumo_rl.environment.env.SumoEnvironment.encode">encode() (sumo_rl.environment.env.SumoEnvironment method)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="G" class="genindex-section">
+  <h2>G</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="../documentation/traffic_signal/#sumo_rl.environment.traffic_signal.TrafficSignal.get_accumulated_waiting_time_per_lane">get_accumulated_waiting_time_per_lane() (sumo_rl.environment.traffic_signal.TrafficSignal method)</a>
+</li>
+        <li><a href="../documentation/traffic_signal/#sumo_rl.environment.traffic_signal.TrafficSignal.get_average_speed">get_average_speed() (sumo_rl.environment.traffic_signal.TrafficSignal method)</a>
+</li>
+        <li><a href="../documentation/traffic_signal/#sumo_rl.environment.traffic_signal.TrafficSignal.get_lanes_density">get_lanes_density() (sumo_rl.environment.traffic_signal.TrafficSignal method)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="../documentation/traffic_signal/#sumo_rl.environment.traffic_signal.TrafficSignal.get_lanes_queue">get_lanes_queue() (sumo_rl.environment.traffic_signal.TrafficSignal method)</a>
+</li>
+        <li><a href="../documentation/traffic_signal/#sumo_rl.environment.traffic_signal.TrafficSignal.get_out_lanes_density">get_out_lanes_density() (sumo_rl.environment.traffic_signal.TrafficSignal method)</a>
+</li>
+        <li><a href="../documentation/traffic_signal/#sumo_rl.environment.traffic_signal.TrafficSignal.get_pressure">get_pressure() (sumo_rl.environment.traffic_signal.TrafficSignal method)</a>
+</li>
+        <li><a href="../documentation/traffic_signal/#sumo_rl.environment.traffic_signal.TrafficSignal.get_total_queued">get_total_queued() (sumo_rl.environment.traffic_signal.TrafficSignal method)</a>
+</li>
+    </ul></td>
   </tr></table>
 </section>
 
@@ -236,10 +304,22 @@
   <h2>O</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="../documentation/pz_env/#sumo_rl.environment.env.SumoEnvironmentPZ.observation_space">observation_space() (sumo_rl.environment.env.SumoEnvironmentPZ method)</a>
+        <li><a href="../documentation/sumo_env/#sumo_rl.environment.env.SumoEnvironment.observation_space">observation_space (sumo_rl.environment.env.SumoEnvironment property)</a>
 </li>
+        <li><a href="../documentation/pz_env/#sumo_rl.environment.env.SumoEnvironmentPZ.observation_space">observation_space() (sumo_rl.environment.env.SumoEnvironmentPZ method)</a>
+
+        <ul>
+          <li><a href="../documentation/observations/#sumo_rl.environment.observations.DefaultObservationFunction.observation_space">(sumo_rl.environment.observations.DefaultObservationFunction method)</a>
+</li>
+          <li><a href="../documentation/observations/#sumo_rl.environment.observations.ObservationFunction.observation_space">(sumo_rl.environment.observations.ObservationFunction method)</a>
+</li>
+        </ul></li>
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="../documentation/sumo_env/#sumo_rl.environment.env.SumoEnvironment.observation_spaces">observation_spaces() (sumo_rl.environment.env.SumoEnvironment method)</a>
+</li>
+        <li><a href="../documentation/observations/#sumo_rl.environment.observations.ObservationFunction">ObservationFunction (class in sumo_rl.environment.observations)</a>
+</li>
         <li><a href="../documentation/pz_env/#sumo_rl.environment.env.SumoEnvironmentPZ.observe">observe() (sumo_rl.environment.env.SumoEnvironmentPZ method)</a>
 </li>
     </ul></td>
@@ -250,6 +330,8 @@
   <h2>R</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="../documentation/traffic_signal/#sumo_rl.environment.traffic_signal.TrafficSignal.register_reward_fn">register_reward_fn() (sumo_rl.environment.traffic_signal.TrafficSignal class method)</a>
+</li>
         <li><a href="../documentation/sumo_env/#sumo_rl.environment.env.SumoEnvironment.render">render() (sumo_rl.environment.env.SumoEnvironment method)</a>
 
         <ul>
@@ -272,16 +354,20 @@
   <h2>S</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="../documentation/sumo_env/#sumo_rl.environment.env.SumoEnvironment.save_csv">save_csv() (sumo_rl.environment.env.SumoEnvironment method)</a>
+
+        <ul>
+          <li><a href="../documentation/pz_env/#sumo_rl.environment.env.SumoEnvironmentPZ.save_csv">(sumo_rl.environment.env.SumoEnvironmentPZ method)</a>
+</li>
+        </ul></li>
         <li><a href="../documentation/pz_env/#sumo_rl.environment.env.SumoEnvironmentPZ.seed">seed() (sumo_rl.environment.env.SumoEnvironmentPZ method)</a>
 </li>
         <li><a href="../documentation/traffic_signal/#sumo_rl.environment.traffic_signal.TrafficSignal.set_next_phase">set_next_phase() (sumo_rl.environment.traffic_signal.TrafficSignal method)</a>
 </li>
-        <li><a href="../documentation/sumo_env/#sumo_rl.environment.env.SumoEnvironment.sim_step">sim_step (sumo_rl.environment.env.SumoEnvironment property)</a>
-</li>
-        <li><a href="../documentation/pz_env/#sumo_rl.environment.env.SumoEnvironmentPZ.state">state() (sumo_rl.environment.env.SumoEnvironmentPZ method)</a>
-</li>
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="../documentation/sumo_env/#sumo_rl.environment.env.SumoEnvironment.sim_step">sim_step (sumo_rl.environment.env.SumoEnvironment property)</a>
+</li>
         <li><a href="../documentation/sumo_env/#sumo_rl.environment.env.SumoEnvironment.step">step() (sumo_rl.environment.env.SumoEnvironment method)</a>
 
         <ul>
@@ -300,7 +386,21 @@
   <h2>T</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="../documentation/traffic_signal/#sumo_rl.environment.traffic_signal.TrafficSignal.time_to_act">time_to_act (sumo_rl.environment.traffic_signal.TrafficSignal property)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="../documentation/traffic_signal/#sumo_rl.environment.traffic_signal.TrafficSignal">TrafficSignal (class in sumo_rl.environment.traffic_signal)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="U" class="genindex-section">
+  <h2>U</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="../documentation/traffic_signal/#sumo_rl.environment.traffic_signal.TrafficSignal.update">update() (sumo_rl.environment.traffic_signal.TrafficSignal method)</a>
 </li>
     </ul></td>
   </tr></table>
