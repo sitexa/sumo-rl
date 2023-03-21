@@ -1,0 +1,16 @@
+args: Namespace(
+    route='nets/single-intersection/single-intersection.rou.xml',
+    alpha=0.1,
+    gamma=0.99,
+    epsilon=0.05,
+    min_epsilon=0.005,
+    decay=1.0,
+    min_green=10,
+    max_green=50,
+    gui=False,
+    fixed=False,
+    ns=42,
+    we=42,
+    seconds=100000,
+    v=False,
+    runs=1)
