@@ -25,8 +25,8 @@ if __name__ == "__main__":
     episodes = 4
 
     env = SumoEnvironment(
-        net_file="nets/4x4-Lucas/4x4.net.xml",
-        route_file="nets/4x4-Lucas/4x4c1c2c1c2.rou.xml",
+        net_file="nets/2x2grid/2x2.net.xml",
+        route_file="nets/2x2grid/2x2.rou.xml",
         use_gui=False,
         num_seconds=80000,
         min_green=5,
@@ -58,11 +58,11 @@ if __name__ == "__main__":
             while not done["__all__"]:
                 actions = {ts: ql_agents[ts].act() for ts in ql_agents.keys()}
 
-                s, r, done, trunc, info = env.step(action=actions)
+                s, r, done, info = env.step(action=actions)
 
                 for agent_id in s.keys():
                     ql_agents[agent_id].learn(next_state=env.encode(s[agent_id], agent_id), reward=r[agent_id])
 
-            env.save_csv(f"outputs/4x4/ql-4x4grid_run{run}", episode)
+            env.save_csv(f"outputs/2x2/ql-2x2grid_run{run}", episode)
 
     env.close()

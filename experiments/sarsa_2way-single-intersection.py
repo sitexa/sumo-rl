@@ -69,12 +69,12 @@ if __name__ == "__main__":
         done = False
         if args.fixed:
             while not done:
-                _, _, done, _ = env.step({})
+                _, _, done, _, _ = env.step({})
         else:
             while not done:
                 action = agent.act(obs)
 
-                next_obs, r, done, _ = env.step(action=action)
+                next_obs, r, done, _, _ = env.step(action=action)
 
                 agent.learn(state=obs, action=action, reward=r, next_state=next_obs, done=done)
 

@@ -1,43 +1,40 @@
-<routes>
+<?xml version="1.0" encoding="UTF-8"?>
 
-    <flow id="0" from="16to0" to="12to24" begin="0" end="20000" period="3" departSpeed="max" departPos="base" departLane="best"/>
-    <flow id="1" from="17to1" to="13to25" begin="0" end="20000" period="3" departSpeed="max" departPos="base" departLane="best"/>
-    <flow id="2" from="18to2" to="14to26" begin="0" end="20000" period="3" departSpeed="max" departPos="base" departLane="best"/>
-    <flow id="3" from="19to3" to="15to27" begin="0" end="20000" period="3" departSpeed="max" departPos="base" departLane="best"/>
+<!-- generated on 2023-03-21 16:10:28 by Eclipse SUMO netedit Version 1.16.0
+-->
 
-    <flow id="4" from="20to0" to="3to28" begin="0" end="20000" period="3" departSpeed="max" departPos="base" departLane="best"/>
-    <flow id="5" from="21to4" to="7to29" begin="0" end="20000" period="3" departSpeed="max" departPos="base" departLane="best"/>
-    <flow id="6" from="22to8" to="11to30" begin="0" end="20000" period="3" departSpeed="max" departPos="base" departLane="best"/>
-    <flow id="7" from="23to12" to="15to31" begin="0" end="20000" period="3" departSpeed="max" departPos="base" departLane="best"/>
-
-    <flow id="8" from="16to0" to="12to24" begin="20001" end="40000" period="6" departSpeed="max" departPos="base" departLane="best"/>
-    <flow id="9" from="17to1" to="13to25" begin="20001" end="40000" period="6" departSpeed="max" departPos="base" departLane="best"/>
-    <flow id="10" from="18to2" to="14to26" begin="20001" end="40000" period="6" departSpeed="max" departPos="base" departLane="best"/>
-    <flow id="11" from="19to3" to="15to27" begin="20001" end="40000" period="6" departSpeed="max" departPos="base" departLane="best"/>
-
-    <flow id="12" from="20to0" to="3to28" begin="20001" end="40000" period="2" departSpeed="max" departPos="base" departLane="best"/>
-    <flow id="13" from="21to4" to="7to29" begin="20001" end="40000" period="2" departSpeed="max" departPos="base" departLane="best"/>
-    <flow id="14" from="22to8" to="11to30" begin="20001" end="40000" period="2" departSpeed="max" departPos="base" departLane="best"/>
-    <flow id="15" from="23to12" to="15to31" begin="20001" end="40000" period="2" departSpeed="max" departPos="base" departLane="best"/>
-
-    <flow id="16" from="16to0" to="12to24" begin="40001" end="60000" period="3" departSpeed="max" departPos="base" departLane="best"/>
-    <flow id="17" from="17to1" to="13to25" begin="40001" end="60000" period="3" departSpeed="max" departPos="base" departLane="best"/>
-    <flow id="18" from="18to2" to="14to26" begin="40001" end="60000" period="3" departSpeed="max" departPos="base" departLane="best"/>
-    <flow id="19" from="19to3" to="15to27" begin="40001" end="60000" period="3" departSpeed="max" departPos="base" departLane="best"/>
-
-    <flow id="20" from="20to0" to="3to28" begin="40001" end="60000" period="3" departSpeed="max" departPos="base" departLane="best"/>
-    <flow id="21" from="21to4" to="7to29" begin="40001" end="60000" period="3" departSpeed="max" departPos="base" departLane="best"/>
-    <flow id="22" from="22to8" to="11to30" begin="40001" end="60000" period="3" departSpeed="max" departPos="base" departLane="best"/>
-    <flow id="23" from="23to12" to="15to31" begin="40001" end="60000" period="3" departSpeed="max" departPos="base" departLane="best"/>
-
-    <flow id="24" from="16to0" to="12to24" begin="60001" end="80000" period="6" departSpeed="max" departPos="base" departLane="best"/>
-    <flow id="25" from="17to1" to="13to25" begin="60001" end="80000" period="6" departSpeed="max" departPos="base" departLane="best"/>
-    <flow id="26" from="18to2" to="14to26" begin="60001" end="80000" period="6" departSpeed="max" departPos="base" departLane="best"/>
-    <flow id="27" from="19to3" to="15to27" begin="60001" end="80000" period="6" departSpeed="max" departPos="base" departLane="best"/>
-
-    <flow id="28" from="20to0" to="3to28" begin="60001" end="80000" period="2" departSpeed="max" departPos="base" departLane="best"/>
-    <flow id="29" from="21to4" to="7to29" begin="60001" end="80000" period="2" departSpeed="max" departPos="base" departLane="best"/>
-    <flow id="30" from="22to8" to="11to30" begin="60001" end="80000" period="2" departSpeed="max" departPos="base" departLane="best"/>
-    <flow id="31" from="23to12" to="15to31" begin="60001" end="80000" period="2" departSpeed="max" departPos="base" departLane="best"/>
-
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <!-- Vehicles, persons and containers (sorted by depart) -->
+    <flow id="0" begin="0.00" departLane="best" departPos="base" departSpeed="max" from="16to0" to="12to24" end="20000.00" period="3.00"/>
+    <flow id="1" begin="0.00" departLane="best" departPos="base" departSpeed="max" from="17to1" to="13to25" end="20000.00" period="3.00"/>
+    <flow id="2" begin="0.00" departLane="best" departPos="base" departSpeed="max" from="18to2" to="14to26" end="20000.00" period="3.00"/>
+    <flow id="3" begin="0.00" departLane="best" departPos="base" departSpeed="max" from="19to3" to="15to27" end="20000.00" period="3.00"/>
+    <flow id="4" begin="0.00" departLane="best" departPos="base" departSpeed="max" from="20to0" to="3to28" end="20000.00" period="3.00"/>
+    <flow id="5" begin="0.00" departLane="best" departPos="base" departSpeed="max" from="21to4" to="7to29" end="20000.00" period="3.00"/>
+    <flow id="6" begin="0.00" departLane="best" departPos="base" departSpeed="max" from="22to8" to="11to30" end="20000.00" period="3.00"/>
+    <flow id="7" begin="0.00" departLane="best" departPos="base" departSpeed="max" from="23to12" to="15to31" end="20000.00" period="3.00"/>
+    <flow id="10" begin="20001.00" departLane="best" departPos="base" departSpeed="max" from="18to2" to="14to26" end="40000.00" period="6.00"/>
+    <flow id="11" begin="20001.00" departLane="best" departPos="base" departSpeed="max" from="19to3" to="15to27" end="40000.00" period="6.00"/>
+    <flow id="12" begin="20001.00" departLane="best" departPos="base" departSpeed="max" from="20to0" to="3to28" end="40000.00" period="2.00"/>
+    <flow id="13" begin="20001.00" departLane="best" departPos="base" departSpeed="max" from="21to4" to="7to29" end="40000.00" period="2.00"/>
+    <flow id="14" begin="20001.00" departLane="best" departPos="base" departSpeed="max" from="22to8" to="11to30" end="40000.00" period="2.00"/>
+    <flow id="15" begin="20001.00" departLane="best" departPos="base" departSpeed="max" from="23to12" to="15to31" end="40000.00" period="2.00"/>
+    <flow id="8" begin="20001.00" departLane="best" departPos="base" departSpeed="max" from="16to0" to="12to24" end="40000.00" period="6.00"/>
+    <flow id="9" begin="20001.00" departLane="best" departPos="base" departSpeed="max" from="17to1" to="13to25" end="40000.00" period="6.00"/>
+    <flow id="16" begin="40001.00" departLane="best" departPos="base" departSpeed="max" from="16to0" to="12to24" end="60000.00" period="3.00"/>
+    <flow id="17" begin="40001.00" departLane="best" departPos="base" departSpeed="max" from="17to1" to="13to25" end="60000.00" period="3.00"/>
+    <flow id="18" begin="40001.00" departLane="best" departPos="base" departSpeed="max" from="18to2" to="14to26" end="60000.00" period="3.00"/>
+    <flow id="19" begin="40001.00" departLane="best" departPos="base" departSpeed="max" from="19to3" to="15to27" end="60000.00" period="3.00"/>
+    <flow id="20" begin="40001.00" departLane="best" departPos="base" departSpeed="max" from="20to0" to="3to28" end="60000.00" period="3.00"/>
+    <flow id="21" begin="40001.00" departLane="best" departPos="base" departSpeed="max" from="21to4" to="7to29" end="60000.00" period="3.00"/>
+    <flow id="22" begin="40001.00" departLane="best" departPos="base" departSpeed="max" from="22to8" to="11to30" end="60000.00" period="3.00"/>
+    <flow id="23" begin="40001.00" departLane="best" departPos="base" departSpeed="max" from="23to12" to="15to31" end="60000.00" period="3.00"/>
+    <flow id="24" begin="60001.00" departLane="best" departPos="base" departSpeed="max" from="16to0" to="12to24" end="80000.00" period="6.00"/>
+    <flow id="25" begin="60001.00" departLane="best" departPos="base" departSpeed="max" from="17to1" to="13to25" end="80000.00" period="6.00"/>
+    <flow id="26" begin="60001.00" departLane="best" departPos="base" departSpeed="max" from="18to2" to="14to26" end="80000.00" period="6.00"/>
+    <flow id="27" begin="60001.00" departLane="best" departPos="base" departSpeed="max" from="19to3" to="15to27" end="80000.00" period="6.00"/>
+    <flow id="28" begin="60001.00" departLane="best" departPos="base" departSpeed="max" from="20to0" to="3to28" end="80000.00" period="2.00"/>
+    <flow id="29" begin="60001.00" departLane="best" departPos="base" departSpeed="max" from="21to4" to="7to29" end="80000.00" period="2.00"/>
+    <flow id="30" begin="60001.00" departLane="best" departPos="base" departSpeed="max" from="22to8" to="11to30" end="80000.00" period="2.00"/>
+    <flow id="31" begin="60001.00" departLane="best" departPos="base" departSpeed="max" from="23to12" to="15to31" end="80000.00" period="2.00"/>
 </routes>

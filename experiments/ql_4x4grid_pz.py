@@ -4,7 +4,6 @@ import sys
 
 import pandas as pd
 
-
 if "SUMO_HOME" in os.environ:
     tools = os.path.join(os.environ["SUMO_HOME"], "tools")
     sys.path.append(tools)
@@ -16,7 +15,6 @@ import traci
 import sumo_rl
 from sumo_rl.agents import QLAgent
 from sumo_rl.exploration import EpsilonGreedy
-
 
 if __name__ == "__main__":
 
@@ -50,11 +48,11 @@ if __name__ == "__main__":
         }
         infos = []
         for agent in env.agent_iter():
-            s, r, done, info = env.last()
+            s, r, done, trunc, info = env.last()
             if ql_agents[agent].action is not None:
                 ql_agents[agent].learn(next_state=env.unwrapped.env.encode(s, agent), reward=r)
 
-            action = ql_agents[agent].act() if not done else None
+            action = ql_agents[agent].act() if not (done or trunc) else None
             env.step(action)
 
         env.unwrapped.env.save_csv("outputs/4x4/pz_ql", run)
