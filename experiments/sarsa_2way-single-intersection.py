@@ -67,14 +67,41 @@ if __name__ == "__main__":
         )
 
         done = False
+        trunc = False
         if args.fixed:
             while not done:
-                _, _, done, _, _ = env.step({})
+                _, _, done, trunc, _ = env.step({})
         else:
-            while not done:
+            obs = obs[0]
+            """
+            obs:
+            (
+            array([1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,0., 0., 0., 0.],dtype=float32),
+            {
+                'step': 0.0,
+                'system_total_stopped': 0,
+                'system_total_waiting_time': 0,
+                'system_mean_waiting_time': 0.0,
+                'system_mean_speed': 0.0,
+                't_stopped': 0,
+                't_accumulated_waiting_time': 0.0,
+                't_average_speed': 1.0,
+                'agents_total_stopped': 0,
+                'agents_total_accumulated_waiting_time': 0.0
+            }
+            )
+            next_obs: 
+            [1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,0., 0., 0., 0.]
+            
+            由于 obs = env.reset()  与 next_obs= env.step(action)的结构不一样，需要进一同一化处理，即
+            obs = obs[0] 这样就相同了。
+            
+            由于新版本gym中observation增加了truncated，也要在代码中做相应处理.
+            """
+            while not (done or trunc):
                 action = agent.act(obs)
 
-                next_obs, r, done, _, _ = env.step(action=action)
+                next_obs, r, done, trunc, _ = env.step(action=action)
 
                 agent.learn(state=obs, action=action, reward=r, next_state=next_obs, done=done)
 
