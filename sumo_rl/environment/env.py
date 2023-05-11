@@ -26,7 +26,6 @@ from .traffic_signal import TrafficSignal
 
 LIBSUMO = "LIBSUMO_AS_TRACI" in os.environ
 
-
 def env(**kwargs):
     """Instantiate a PettingoZoo environment."""
     env = SumoEnvironmentPZ(**kwargs)
